@@ -119,7 +119,7 @@ $print          = ($_GET['print']) ? $_GET['print'] : 0;
 $w              = new random_word($how_many_words, $print);
 ?>
 
-<h1>Random Word Generator</h1>
+<h1>Random Word Generator <!-- git push test--></h1>
 
 <p>
   <big><b>The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
