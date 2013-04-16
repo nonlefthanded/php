@@ -23,7 +23,7 @@
   print_r($words->words); // Print out an array of random words.
 ?>
 ```
-
+*
 ```php
 class random_word {
    public function __construct($how_many_words = 1, $print = 0) {
