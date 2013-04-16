@@ -2,7 +2,7 @@
 
 ## Get a list or single random word from portland.craigslist.org.
 
-
+```php
 class random_word {
    public function __construct($how_many_words = 1, $print = 0) {
       $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
@@ -49,6 +49,9 @@ class random_word {
       }
    }
 }
+```
+
+
 $how_many_words = ($_GET['how_many_words']) ? $_GET['how_many_words'] : 10;
 $print          = ($_GET['print']) ? $_GET['print'] : 0;
 $w              = new random_word($how_many_words, $print);
