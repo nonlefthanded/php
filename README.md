@@ -1,6 +1,7 @@
 <code><pre>
 Random Word Generator
 
+
 class random_word {
    public function __construct($how_many_words = 1, $print = 0) {
       $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
