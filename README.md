@@ -6,13 +6,22 @@
   - Get a list or single random word from portland.craigslist.org.
 
 * **Overview**
+  - The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
+  - It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and ones under 4 letters.
+  - It then makes an array of 'em ('words'), and plucks off the last one ('word') for you to do with what you wish.
   - **PRO:** Nothing more random than free Portland Stuff.
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
 * **Example Usage**:
-  - The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
-  - It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and ones under 4 letters.
-  - It then makes an array of 'em ('words'), and plucks off the last one ('word') for you to do with what you wish.
+  - ```php <?php</span>
+    $how_many_words = 22;   <span style='color:gray;'>// Default is 10, ceiling is 50.</span>
+    $print          = FALSE <span style='color:gray;'>// Don't print out the arrays. This is the default.</span>
+    $words          = <span style='color:blue'>new</span> random_word($how_many_words, $print);
+
+    <span style='color:blue'>echo</span> $words->word;      <span style='color:gray;'>// Print out your random word.</span>
+    print_r($words->words); <span style='color:gray;'>// Print out an array of random words.</span>
+  <span style='color:cyan;'>?&gt;</span>
+  ```
 
 ```php
 class random_word {
