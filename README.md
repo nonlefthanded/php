@@ -1,5 +1,4 @@
-<code><pre>
-Random Word Generator
+# Random Word Generator: Get a list or single random word from portland.craigslist.org.
 
 
 class random_word {
