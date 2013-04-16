@@ -1,4 +1,4 @@
-<code>
+<code><pre>
 Random Word Generator
 
 class random_word {
@@ -98,4 +98,4 @@ The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <
   <a href='http://portland.craigslist.org/zip/' target='_blank'>portland.craigslist.org/zip</a> 
   parsed by 
   <a href='http://www.nonlefthanded.com' target='_blank'>nonlefthanded.com</a>
-</code>
+</pre></code>
