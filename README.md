@@ -1,72 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Random Word Generator</title>
-
-  <style type="text/css">
-
-    ::selection{ background-color: #f30; color: white; }
-    ::moz-selection{ background-color: #f30; color: white; }
-    ::webkit-selection{ background-color: #f30; color: white; }
-
-    body {
-      background-color: #fff;
-      margin: 2em;
-      font: 13px/20px normal Helvetica, Arial, sans-serif;
-      color: #4F5155;
-    }
-
-    a {
-      color: #003399;
-      background-color: transparent;
-      font-weight: normal;
-      text-decoration:none;
-    }
-
-    a:hover {
-      text-decoration:underline;
-    }
-
-    h1 {
-      color: #444;
-      background-color: transparent;
-      border-bottom: 1px solid #D0D0D0;
-      font-size: 1.5em;
-      font-weight: normal;
-      margin: 0 0 14px 0;
-      padding: 15px 0px;
-    }
-
-    hr {
-      border:0;
-      border-bottom: 1px solid #D0D0D0;
-    }
-
-    code {
-      font-family: Consolas, Monaco, Courier New, Courier, monospace;
-      font-size: 12px;
-      background-color: #f9f9f9;
-      border: 1px solid #D0D0D0;
-      color: #002166;
-      display: block;
-      margin: 14px 0 14px 0;
-      padding: 12px 10px 12px 10px;
-      white-space:pre;
-    }
-
-    p.footer{
-      text-align: right;
-      font-size: 11px;
-      border-top: 1px solid #D0D0D0;
-      line-height: 22px;
-      margin-top:3em;
-    }
-
-  </style>
-</head>
-<body>
-<?php
+Random Word Generator
 
 class random_word {
    public function __construct($how_many_words = 1, $print = 0) {
@@ -117,9 +49,9 @@ class random_word {
 $how_many_words = ($_GET['how_many_words']) ? $_GET['how_many_words'] : 10;
 $print          = ($_GET['print']) ? $_GET['print'] : 0;
 $w              = new random_word($how_many_words, $print);
-?>
 
-<h1>Random Word Generator</h1>
+
+
 
 <p>
   <big><b>The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
