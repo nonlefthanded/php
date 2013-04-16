@@ -2,13 +2,25 @@
 
 ## Get a list or single random word from portland.craigslist.org.
 
+* **Random Word**
+  - Get a list or single random word from portland.craigslist.org.
+
+* **Overview**
+  - **PRO:** Nothing more random than free Portland Stuff.
+  - **CON:** If Craigslist changes their formatting, this would no longer work.
+
+* **Example Usage**:
+  - The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
+  - It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and ones under 4 letters.
+  - It then makes an array of 'em ('words'), and plucks off the last one ('word') for you to do with what you wish.
+
 ```php
 class random_word {
    public function __construct($how_many_words = 1, $print = 0) {
       $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
       $boring         = "free next postings nbsp craigslist more with what that there them must their this also were some your have from when they these does ikea";
       $url            = "http://portland.craigslist.org/zip/";
-      $pattern        = "/&lt;p.*?>.*?&lt;a.*?>(.*?)&lt;\/a>.*?&lt;\/p>/";
+      $pattern        = "/<p.*?>.*?<a.*?>(.*?)<\/a>.*?<\/p>/";
 
       $str            = ereg_replace("[\r|\n]"," ",file_get_contents($url)); // <- Turn page into one string...
       $lower_str      = strtolower($str);                                    // <- Lowercase string...
