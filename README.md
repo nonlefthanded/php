@@ -13,15 +13,16 @@
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
 * **Example Usage**:
-```php <?php
-    $how_many_words = 22;   // Default is 10, ceiling is 50.
-    $print          = FALSE // Don't print out the arrays. This is the default.
-    $words          = new random_word($how_many_words, $print);
+```php
+<?php
+  $how_many_words = 22;   // Default is 10, ceiling is 50.
+  $print          = FALSE // Don't print out the arrays. This is the default.
+  $words          = new random_word($how_many_words, $print);
 
-    echo $words->word;      // Print out your random word.
-    print_r($words->words); // Print out an array of random words.
-    ?>
-
+  echo $words->word;      // Print out your random word.
+  print_r($words->words); // Print out an array of random words.
+?>
+```
 
 ```php
 class random_word {
