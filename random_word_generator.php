@@ -114,8 +114,8 @@
     }
   }
         
-$how_many_words = ($_GET['how_many_words']) ? $_GET['how_many_words'] : 10;
-$print          = ($_GET['print']) ? $_GET['print'] : 0;
+$how_many_words = ($_GET['how_many_words']) ? intval($_GET['how_many_words']) : 10;
+$print          = ($_GET['print']) ? intval($_GET['print']) : 0;
 $w              = new random_word($how_many_words, $print);
 ?>
 
