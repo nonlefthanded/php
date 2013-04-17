@@ -87,4 +87,6 @@
 </ol>
 ```
 * **Getting Started**
-  - Download 'random_word_generator.php,' save it to a php-enabled server/directory, and go.
+  - Download 'random_word_generator.php.'
+  - Save it to a php-enabled server/directory.
+  - Go, go, go...
