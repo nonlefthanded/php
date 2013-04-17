@@ -3,9 +3,9 @@
 Gets a list and/or single random word from portland.craigslist.org.
 
 * **Overview:**
-  - The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
-  - It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and ones under 4 letters.
-  - It then makes an array of 'em ('words'), and plucks off the last one ('word') for you to do with what you wish.
+  - The Random Word Generator uses the "*For Sale -> Free*" section of *Portland's Craigslist*. 
+  - It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and anything under 4 letters.
+  - It then makes an array of 'em ('words'), and plucks off the first one ('word') for you to do with what you wish.
   - **PRO:** Nothing more random than free Portland Stuff.
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
