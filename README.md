@@ -86,3 +86,5 @@
   <li><b><?php echo implode("</b></li>\n  <li><b>", $w->words) ?></b></li>
 </ol>
 ```
+* **Getting Started**
+  - Download 'random_word_generator.php,' save it to a php-enabled server/directory, and go.
