@@ -70,9 +70,9 @@
   ```
 
 * **Example Usage (html chunk)**:
-```html
-<p>
-  <a href='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>'>New Set (Default:10, no debugging info)</a>
+    ```html
+  <p>
+    <a href='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>'>New Set (Default:10, no debugging info)</a>
   |
   <a href='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>?how_many_words=25'>New Set (25)</a>
   |
@@ -85,7 +85,7 @@
 <ol>
   <li><b><?php echo implode("</b></li>\n  <li><b>", $w->words) ?></b></li>
 </ol>
-```
+    ```
 * **Getting Started**
   - Download 'random_word_generator.php.'
   - Save it to a php-enabled server/directory.
