@@ -1,7 +1,6 @@
 # Random Word Generator: 
 
-* **Random Word Generator:**
-  - Get a list or single random word from portland.craigslist.org.
+Gets a list and/or single random word from portland.craigslist.org.
 
 * **Overview:**
   - The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
