@@ -14,7 +14,7 @@ Gets a list and/or single random word from portland.craigslist.org.
     <?php
       class random_word {
         public function __construct($how_many_words = 1, $print = 0) {
-          $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
+          $how_many_words = ($how_many_words > 50 || $how_many_words < 0 || !intval($how_many_words)) ? 50 : intval($how_many_words) ;
           $boring         = "free next postings nbsp craigslist more with what that there them must their this also were some your have from when they these does ikea";
           $url            = "http://portland.craigslist.org/zip/";
           $pattern        = "/<p.*?>.*?<a.*?>(.*?)<\/a>.*?<\/p>/";
@@ -37,7 +37,9 @@ Gets a list and/or single random word from portland.craigslist.org.
           }
 
           unset($tmp['tmp']);
-          $this->words = array_keys($tmp);
+          $this->words          = array_keys($tmp);
+          $this->word           = $this->words[0];
+          $this->how_many_words = count($this->words);
 
           // ---------------------------------
           // $print = 1 to see the array
