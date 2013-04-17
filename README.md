@@ -56,9 +56,9 @@
          
       }
       if ($print != 0) {
-         echo "<code>";
+         echo "<code><pre>";
          print_r($this);
-         echo "</code>";
+         echo "</pre></code>";
       }
     }
   }
