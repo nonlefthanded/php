@@ -31,9 +31,8 @@ Gets a list and/or single random word from portland.craigslist.org.
           $tmp['tmp']     = 1; // <- there for count() in while loop...
 
           while(count($tmp) < ($how_many_words + 1)) {
-             $n                = rand(0,count($text_array) - 1);
-             $this->word       = $text_array[$n];
-             $tmp[$this->word] = 1;
+            $n                = rand(0,count($text_array) - 1);
+            $tmp[$text_array[$n]] = 1;
           }
 
           unset($tmp['tmp']);
@@ -46,16 +45,16 @@ Gets a list and/or single random word from portland.craigslist.org.
           // $print > 1 to see debugging info.
           // ---------------------------------
           if ($print > 1) {
-             $this->debug->message        = "Random Word Generator has a ceiling of 50 words.";
-             $this->debug->url            = htmlentities($url);
-             $this->debug->view_pattern   = htmlentities($pattern);
-             $this->debug->how_many_words = "<b>" . count($text_array) . "</b> words from <b><a href='" . $url . "' target='_blank'>" . $url . "</a></b>.";
-             $this->debug->text_array     = $text_array;
+            $this->debug->message        = "Random Word Generator has a ceiling of 50 words.";
+            $this->debug->url            = htmlentities($url);
+            $this->debug->view_pattern   = htmlentities($pattern);
+            $this->debug->how_many_words = "<b>" . count($text_array) . "</b> words from <b><a href='" . $url . "' target='_blank'>" . $url . "</a></b>.";
+            $this->debug->text_array     = $text_array;
           }
           if ($print != 0) {
-             echo "<code><pre>";
-             print_r($this);
-             echo "</pre></code>";
+            echo "<code><pre>";
+            print_r($this);
+            echo "</pre></code>";
           }
         }
       }
