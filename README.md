@@ -20,54 +20,53 @@
           $url            = "http://portland.craigslist.org/zip/";
           $pattern        = "/<p.*?>.*?<a.*?>(.*?)<\/a>.*?<\/p>/";
 
-      $str            = ereg_replace("[\r|\n]"," ",file_get_contents($url)); // <- Turn page into one string...
-      $lower_str      = strtolower($str);                                    // <- Lowercase string...
-      $links_in_paras = preg_match_all($pattern,$lower_str,$m);              // <- Get links inside paragraphs from that string...
-      $all_alpha      = ereg_replace("[^a-z ]"," ",implode(' ',$m[1]));      // <- Turn that array back to a string and remove all non-alpha chars...
-      $not_boring     = str_replace(explode(' ',$boring),' ',$all_alpha);    // <- Remove words from the list of "boring" words...
-      $less_than_num  = preg_replace('/\b\w{1,3}\b/',' ',$not_boring);       // <- Remove words of less than 4 chars...
-      $clean_string   = trim(preg_replace('/\s\s+/', ' ',$less_than_num));   // <- Remove more than two spaces and trim the string...
-      $text_array     = explode(' ', $clean_string);                         // <- Back to an array.
+          $str            = ereg_replace("[\r|\n]"," ",file_get_contents($url)); // <- Turn page into one string...
+          $lower_str      = strtolower($str);                                    // <- Lowercase string...
+          $links_in_paras = preg_match_all($pattern,$lower_str,$m);              // <- Get links inside paragraphs from that string...
+          $all_alpha      = ereg_replace("[^a-z ]"," ",implode(' ',$m[1]));      // <- Turn that array back to a string and remove all non-alpha chars...
+          $not_boring     = str_replace(explode(' ',$boring),' ',$all_alpha);    // <- Remove words from the list of "boring" words...
+          $less_than_num  = preg_replace('/\b\w{1,3}\b/',' ',$not_boring);       // <- Remove words of less than 4 chars...
+          $clean_string   = trim(preg_replace('/\s\s+/', ' ',$less_than_num));   // <- Remove more than two spaces and trim the string...
+          $text_array     = explode(' ', $clean_string);                         // <- Back to an array.
 
-      $tmp['tmp']     = 1; // <- there for count() in while loop...
+          $tmp['tmp']     = 1; // <- there for count() in while loop...
 
-      while(count($tmp) < ($how_many_words + 1)) {
-         $n                = rand(0,count($text_array) - 1);
-         $this->word       = $text_array[$n];
-         $tmp[$this->word] = 1;
+          while(count($tmp) < ($how_many_words + 1)) {
+             $n                = rand(0,count($text_array) - 1);
+             $this->word       = $text_array[$n];
+             $tmp[$this->word] = 1;
+          }
+
+          unset($tmp['tmp']);
+          $this->words = array_keys($tmp);
+
+          // ---------------------------------
+          // $print = 1 to see the array
+          // $print > 1 to see debugging info.
+          // ---------------------------------
+          if ($print > 1) {
+             $this->debug->message        = "Random Word Generator has a ceiling of 50 words.";
+             $this->debug->url            = htmlentities($url);
+             $this->debug->view_pattern   = htmlentities($pattern);
+             $this->debug->how_many_words = "<b>" . count($text_array) . "</b> words from <b><a href='" . $url . "' target='_blank'>" . $url . "</a></b>.";
+             $this->debug->text_array     = $text_array;
+          }
+          if ($print != 0) {
+             echo "<code><pre>";
+             print_r($this);
+             echo "</pre></code>";
+          }
+        }
       }
 
-      unset($tmp['tmp']);
-      $this->words = array_keys($tmp);
+      $how_many_words = 22;   // Default is 10, ceiling is 50.
+      $print          = FALSE // Don't print out the arrays. This is the default.
+      $words          = new random_word($how_many_words, $print);
 
-      // ---------------------------------
-      // $print = 1 to see the array
-      // $print > 1 to see debugging info.
-      // ---------------------------------
-      if ($print > 1) {
-         $this->debug->message        = "Random Word Generator has a ceiling of 50 words.";
-         $this->debug->url            = htmlentities($url);
-         $this->debug->view_pattern   = htmlentities($pattern);
-         $this->debug->how_many_words = "<b>" . count($text_array) . "</b> words from <b><a href='" . $url . "' target='_blank'>" . $url . "</a></b>.";
-         $this->debug->text_array     = $text_array;
-         
-      }
-      if ($print != 0) {
-         echo "<code><pre>";
-         print_r($this);
-         echo "</pre></code>";
-      }
-    }
-  }
-
-  $how_many_words = 22;   // Default is 10, ceiling is 50.
-  $print          = FALSE // Don't print out the arrays. This is the default.
-  $words          = new random_word($how_many_words, $print);
-
-  echo $words->word;      // Print out your random word.
-  print_r($words->words); // Print out an array of random words.
-?>
-  ```
+      echo $words->word;      // Print out your random word.
+      print_r($words->words); // Print out an array of random words.
+    ?>
+    ```
 
 * **Example Usage (html chunk)**:
     ```html
