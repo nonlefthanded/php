@@ -15,7 +15,6 @@
 * **Example Usage**:
 ```php
 <?php
-
   class random_word {
     public function __construct($how_many_words = 1, $print = 0) {
       $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
@@ -69,7 +68,6 @@
 
   echo $words->word;      // Print out your random word.
   print_r($words->words); // Print out an array of random words.
-
 ?>
 ```
 
