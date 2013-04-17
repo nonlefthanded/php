@@ -11,8 +11,7 @@
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
 * **Example Usage (php chunk):**
-  -
-```php
+  ```php
 <?php
   class random_word {
     public function __construct($how_many_words = 1, $print = 0) {
@@ -68,7 +67,7 @@
   echo $words->word;      // Print out your random word.
   print_r($words->words); // Print out an array of random words.
 ?>
-```
+  ```
 
 * **Example Usage (html chunk)**:
 ```html
