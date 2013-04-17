@@ -72,31 +72,8 @@
 ?>
 ```
 
-
-
-
-
-The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
-  It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and ones under 4 letters.
-  It then makes an array of 'em ('words'), and plucks off the last one ('word') for you to do with what you wish.
-
-
-  Example: 
-  &lt;?php</span>
-    $how_many_words = 22;   <span style='color:gray;'>// Default is 10, ceiling is 50.</span>
-    $print          = FALSE <span style='color:gray;'>// Don't print out the arrays. This is the default.</span>
-    $words          = <span style='color:blue'>new</span> random_word($how_many_words, $print);
-
-    <span style='color:blue'>echo</span> $words->word;      <span style='color:gray;'>// Print out your random word.</span>
-    print_r($words->words); <span style='color:gray;'>// Print out an array of random words.</span>
-  <span style='color:cyan;'>?&gt;
-  
-  <b>Note:</b> If Craigslist changes their formatting, this would no longer work.
-  </code>
-</p>
-
-
-<hr />
+* **Example Usage (cont. html)**:
+```html
 
 <p>
   <a href='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>'>New Set (Default:10, no debugging info)</a>
@@ -115,9 +92,4 @@ The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <
 <ol>
   <li><b><?php echo implode("</b></li>\n  <li><b>", $w->words) ?></b></li>
 </ol>
-
-<p class='footer'>
-  <a href='http://portland.craigslist.org/zip/' target='_blank'>portland.craigslist.org/zip</a> 
-  parsed by 
-  <a href='http://www.nonlefthanded.com' target='_blank'>nonlefthanded.com</a>
-</pre></code>
+```
