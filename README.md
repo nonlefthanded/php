@@ -15,17 +15,8 @@
 * **Example Usage**:
 ```php
 <?php
-  $how_many_words = 22;   // Default is 10, ceiling is 50.
-  $print          = FALSE // Don't print out the arrays. This is the default.
-  $words          = new random_word($how_many_words, $print);
 
-  echo $words->word;      // Print out your random word.
-  print_r($words->words); // Print out an array of random words.
-?>
-```
-*
-```php
-class random_word {
+  class random_word {
    public function __construct($how_many_words = 1, $print = 0) {
       $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
       $boring         = "free next postings nbsp craigslist more with what that there them must their this also were some your have from when they these does ikea";
@@ -70,13 +61,18 @@ class random_word {
          echo "</code>";
       }
    }
-}
+  }
+
+  $how_many_words = 22;   // Default is 10, ceiling is 50.
+  $print          = FALSE // Don't print out the arrays. This is the default.
+  $words          = new random_word($how_many_words, $print);
+
+  echo $words->word;      // Print out your random word.
+  print_r($words->words); // Print out an array of random words.
+
+
 ```
 
-
-$how_many_words = ($_GET['how_many_words']) ? $_GET['how_many_words'] : 10;
-$print          = ($_GET['print']) ? $_GET['print'] : 0;
-$w              = new random_word($how_many_words, $print);
 
 
 
