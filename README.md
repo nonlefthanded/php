@@ -13,7 +13,7 @@
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
 
-* **Example Usage**:
+* **Example Usage (php chunk)**:
 ```php
 <?php
   class random_word {
@@ -72,7 +72,7 @@
 ?>
 ```
 
-* **Example Usage (cont. html)**:
+* **Example Usage (html chunk)**:
 ```html
 <p>
   <a href='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>'>New Set (Default:10, no debugging info)</a>
