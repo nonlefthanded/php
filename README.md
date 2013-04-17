@@ -92,5 +92,5 @@
   - Go, go, go...
 
 * **Colophon**
-  - Credits -- www.nonlefthanded.com, www.portland.craigslist.org.
+  - Credits -- www.nonlefthanded.com, http://portland.craigslist.org.
   - Copyright and License -- It's all you.
