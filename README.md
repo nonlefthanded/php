@@ -64,8 +64,8 @@ Gets a list and/or single random word from portland.craigslist.org.
       $print          = FALSE // Don't print out the arrays. This is the default.
       $words          = new random_word($how_many_words, $print);
 
-      echo $words->word;      // Print out your random word.
-      print_r($words->words); // Print out an array of random words.
+      // echo $words->word;      // Print out your random word.
+      // print_r($words->words); // Print out an array of random words.
     ?>
     ```
 
