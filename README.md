@@ -71,7 +71,6 @@
   print_r($words->words); // Print out an array of random words.
 
 ?>
-
 ```
 
 
