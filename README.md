@@ -11,6 +11,7 @@
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
 * **Example Usage (php chunk):**
+  -
 ```php
 <?php
   class random_word {
