@@ -11,14 +11,14 @@
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
 * **Example Usage (php chunk):**
-  ```php
-<?php
-  class random_word {
-    public function __construct($how_many_words = 1, $print = 0) {
-      $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
-      $boring         = "free next postings nbsp craigslist more with what that there them must their this also were some your have from when they these does ikea";
-      $url            = "http://portland.craigslist.org/zip/";
-      $pattern        = "/<p.*?>.*?<a.*?>(.*?)<\/a>.*?<\/p>/";
+    ```php
+    <?php
+      class random_word {
+        public function __construct($how_many_words = 1, $print = 0) {
+          $how_many_words = ($how_many_words > 50) ? 50 : intval($how_many_words) ;
+          $boring         = "free next postings nbsp craigslist more with what that there them must their this also were some your have from when they these does ikea";
+          $url            = "http://portland.craigslist.org/zip/";
+          $pattern        = "/<p.*?>.*?<a.*?>(.*?)<\/a>.*?<\/p>/";
 
       $str            = ereg_replace("[\r|\n]"," ",file_get_contents($url)); // <- Turn page into one string...
       $lower_str      = strtolower($str);                                    // <- Lowercase string...
