@@ -1,19 +1,16 @@
 # Random Word Generator: 
 
-## Get a list or single random word from portland.craigslist.org.
-
-* **Random Word**
+* **Random Word Generator:**
   - Get a list or single random word from portland.craigslist.org.
 
-* **Overview**
+* **Overview:**
   - The Random Word Generator</b></big> uses the "<b>For Sale:Free</b>" section of <b>Portland's Craigslist</b>. 
   - It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and ones under 4 letters.
   - It then makes an array of 'em ('words'), and plucks off the last one ('word') for you to do with what you wish.
   - **PRO:** Nothing more random than free Portland Stuff.
   - **CON:** If Craigslist changes their formatting, this would no longer work.
 
-
-* **Example Usage (php chunk)**:
+* **Example Usage (php chunk):**
 ```php
 <?php
   class random_word {
