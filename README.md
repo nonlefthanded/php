@@ -90,3 +90,7 @@
   - Download 'random_word_generator.php.'
   - Save it to a php-enabled server/directory.
   - Go, go, go...
+
+* **Colophon**
+  - Credits -- www.nonlefthanded.com, portland.craigslist.org.
+  - Copyright and License -- It's all you.
