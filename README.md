@@ -80,8 +80,11 @@
       |
       <a href='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>?print=2'>New Set (more debugging info)</a>
     </p>
+    
     <p>Single word is "<b><?php echo $w->word ?></b>"
+    
     <p><b><?php echo $how_many_words ?></b> word<?php if ($how_many_words != 1) { ?>s<?php } ?>.</p>
+    
     <ol>
       <li><b><?php echo implode("</b></li>\n  <li><b>", $w->words) ?></b></li>
     </ol>
