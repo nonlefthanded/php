@@ -93,4 +93,4 @@
 
 * **Colophon**
   - Credits -- www.nonlefthanded.com, http://portland.craigslist.org/zip.
-  - Copyright and License -- It's all you.
+  - Copyright and License -- It's all you...
