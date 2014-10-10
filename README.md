@@ -7,7 +7,7 @@ Gets a list and/or single random word from portland.craigslist.org.
   - It finds all the words, eliminates "boring" ones ('them,' 'these,' etc.), and anything under 4 letters.
   - It then makes an array of 'em ('words'), and plucks off the first one ('word') for you to do with what you wish.
   - **PRO:** Nothing more random than free Portland Stuff.
-  - **CON:** If Craigslist changes their formatting, this would no longer work. (They did change formatting, but I just updated the regex pattern.)
+  - **CON:** If Craigslist changes their formatting, this would no longer work. (**UPDATE:** They did change formatting, but I just updated the regex pattern.)
 
 * **Example Usage (php chunk):**
     ```php
